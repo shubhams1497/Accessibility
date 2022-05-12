@@ -13,23 +13,23 @@
         </style>
     </head>
     <body>
-        <header>This contains the demo of some Accessible elements of HTML</header>
+        <div role="heading" aria-level="1">This contains the demo of some Accessible elements of HTML</div>
         <br>
-        <nav>
+        <div role="navigation" aria-label="Navigation Links">
             <a href="/link1" aria-label="Click here to navigate to link1 page" >Link1</a>&nbsp;&nbsp;
             <a href="/link2" aria-label="Click here to navigate to link2 page">Link2</a>&nbsp;&nbsp;
             <a href="/link3" aria-label="Click here to navigate to link3 page">Link3</a>&nbsp;&nbsp;
             <a href="/link4" aria-label="Click here to navigate to link4 page">Link4</a>&nbsp;&nbsp;
-        </nav>
+        </div>
         <form>
-            <label for="firstName"><p >First Name</p></label>
-            <input type="text" id="firstName"/> 
+            <p id="firstNameLabel">First Name</p>
+            <input type="text" aria-labelledby="firstNameLabel"/> 
             
-            <label for="lastName"><p>Last Name</p></label>
-            <input type="text" id="lastName"/> 
+            <p id="lastNameLabel">Last Name</p>
+            <input type="text" aria-labelledby="lastNameLabel" /> 
 
-            <label for="password"><p>Password</p></label>
-            <input type="password" id="password"/> 
+            <p id="passwordLabel">Password</p>
+            <input type="password" aria-labelledby="passwordLabel"/> 
         </form>
         
         <div tabindex="0" class="SignUp" role="button" aria-label="Please click this to proceed with signup" onclick="alert('Signup done!')">Signup</div>
