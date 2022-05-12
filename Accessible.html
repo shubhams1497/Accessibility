@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Accessible HTML</title>
+        <style>
+            .SignUp {
+                margin-top: 20px;
+                border: 2px solid gray; 
+                width: 50px; 
+                padding: 5px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <header>This contains the demo of some Accessible elements of HTML</header>
+        <br>
+        <nav>
+            <a href="/link1" aria-label="Click here to navigate to link1 page" >Link1</a>&nbsp;&nbsp;
+            <a href="/link2" aria-label="Click here to navigate to link2 page">Link2</a>&nbsp;&nbsp;
+            <a href="/link3" aria-label="Click here to navigate to link3 page">Link3</a>&nbsp;&nbsp;
+            <a href="/link4" aria-label="Click here to navigate to link4 page">Link4</a>&nbsp;&nbsp;
+        </nav>
+        <form>
+            <label for="firstName"><p >First Name</p></label>
+            <input type="text" id="firstName"/> 
+            
+            <label for="lastName"><p>Last Name</p></label>
+            <input type="text" id="lastName"/> 
+
+            <label for="password"><p>Password</p></label>
+            <input type="password" id="password"/> 
+        </form>
+        
+        <div tabindex="0" class="SignUp" role="button" aria-label="Please click this to proceed with signup" onclick="alert('Signup done!')">Signup</div>
+
+        <div style="margin-top: 20px">
+            <img src="/1234.jpeg" height="200px" width="auto" tabindex="0" alt="There is a dog in this image"/>
+        </div>
+    </body>
+
+    <!-- Adding script below -->
+    <script>
+        const signupButton = document.querySelector('.SignUp');
+        signupButton.addEventListener('keyup', function(e) {
+            if(e.keyCode == "13") {
+                alert('Signup done!');
+            }
+
+            e.preventDefault();
+        });
+    </script>
+</html>
