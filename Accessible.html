@@ -10,10 +10,22 @@
                 padding: 5px;
                 cursor: pointer;
             }
+            
+            .visuallyhidden {
+                position: absolute;
+                left: 0;
+                top: -500px;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
         </style>
     </head>
     <body>
-        <div role="heading" aria-level="1">This contains the demo of some Accessible elements of HTML</div>
+        <div role="heading" aria-level="1">
+            <div class="visuallyhidden">Welcome this website supports screen readers,</div>
+            This contains the demo of some Accessible elements of HTML
+        </div>
         <br>
         <div role="navigation" aria-label="Navigation Links">
             <a href="/link1" aria-label="Click here to navigate to link1 page" >Link1</a>&nbsp;&nbsp;
